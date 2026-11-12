@@ -21,6 +21,22 @@
 - [ ] Estructura de carpetas y `.asmdef` de `knowledge/ARCHITECTURE.md`
 - [ ] Definir título provisional y pilares en `GAME_DESIGN.md`
 
+## Sistemas del juego — estado de avance
+El % lo confirma el usuario al cerrar cada feature (`flows/cierre-feature.md → paso 4`).
+
+| Sistema / Feature | Avance | Notas |
+|---|---|---|
+| Setup del proyecto (M0) | 0% | fase alcanzada de `flows/setup-proyecto-unity.md`: ninguna (falta Fase 0 — confirmar Mac) |
+| Movimiento + cámara | 0% | M1 paso 1 |
+| Combate | 0% | diseño en `flujos-sistema/flujo-combate.md` |
+| IA de enemigos | 0% | |
+| Habilidades | 0% | |
+| HUD y controles táctiles | 0% | |
+| Progresión (XP / niveles) | 0% | |
+| Botín | 0% | |
+| Zona inicial | 0% | |
+| Arte e iluminación | 0% | |
+
 ## Paquetes instalados en el proyecto
 (ninguno todavía)
 

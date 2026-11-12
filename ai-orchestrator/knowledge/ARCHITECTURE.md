@@ -75,7 +75,7 @@ Assets/
 │   │   │   ├── Screens/            menús, inventario, personaje
 │   │   │   └── Common/             widgets reutilizables
 │   │   ├── Camera/                 rigs de Cinemachine y su lógica
-│   │   ├── Infrastructure/         Save, Networking, Platform, Assets (Addressables), Analytics
+│   │   ├── Infrastructure/         Save, Networking (tiempo real), Backend (API del ecosistema Reloader), Platform, Assets, Analytics
 │   │   ├── Bootstrap/              arranque y composición de servicios
 │   │   └── Editor/                 herramientas propias del editor
 │   ├── Data/                       ScriptableObjects (instancias)
@@ -186,6 +186,7 @@ El jugador agrega `PlayerController` (intents → componentes). El enemigo agreg
 | Navegación IA | AI Navigation (NavMesh) | decidido |
 | Carga de contenido | Addressables (a partir de M2) | planificado |
 | Pruebas | Unity Test Framework (EditMode + PlayMode) | decidido |
-| Multijugador | a decidir en M3 (ver `domains/multiplayer.md`) | pendiente — ADR |
+| Servidor de tiempo real | a decidir en M3 (ver `domains/multiplayer.md`) | pendiente — ADR |
+| Servicios de datos (cuentas, personajes, catálogo) | backend del ecosistema Reloader (`domains/backend-servicios.md`) | propuesto — ADR-005 |
 | Inyección de dependencias | raíz de composición propia en `Bootstrap/` (sin framework al inicio) | decidido; revisar VContainer si crece |
 | Control de versiones | Git + Git LFS | decidido |

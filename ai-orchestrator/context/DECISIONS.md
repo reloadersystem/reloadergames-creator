@@ -28,3 +28,11 @@ Formato: `templates/ADR.md`. Las decisiones no se borran; si cambian, se agrega 
 - **Fecha:** 2026-11-11 · **Estado:** aceptada
 - **Decisión:** reglas, roles y estado en `ReloaderGamesCreator`; el repo del juego no contiene archivos de IA.
 - **Por qué:** el repo del juego puede compartirse con otros sin exponer la automatización; el orquestador sirve para varios juegos.
+
+## ADR-005 — El juego como agente del ecosistema Reloader y uso de su backend para servicios de datos
+- **Fecha:** 2026-11-11 · **Estado:** **propuesta** (decidir antes de M3; no bloquea M1)
+- **Contexto:** el ecosistema Reloader ya tiene base de datos en Azure (cuentas, personajes, clases, facciones, gremios, catálogo, stats, equipo), API REST, microservicios, Docker y CI/CD, coordinados por el Team Leader `ReloaderCore`.
+- **Opciones:** (a) backend nuevo solo para el juego · (b) backend gestionado de terceros · (c) **reutilizar el backend Reloader para servicios de datos** + servidor de tiempo real propio.
+- **Decisión propuesta:** (c). El juego se registra como agente "Game" bajo el Team Leader, cliente igual que Mobile; los cambios de backend se piden por `delegate-task`.
+- **Por qué:** evita duplicar meses de trabajo ya hecho; la app móvil y el juego comparten cuenta y personaje; el modelo de datos ya cubre lo que M3–M4 necesitan.
+- **Consecuencias:** contenido de catálogo original antes de usarlo en el juego (ADR-003); el juego depende de la disponibilidad del backend en modo online (por eso conserva una implementación offline); registrar el agente "Game" en `ReloaderCore/ai-orchestrator/knowledge/ECOSYSTEM.md` (lo hace el Team Leader).
